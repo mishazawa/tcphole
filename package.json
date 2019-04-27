@@ -1,0 +1,26 @@
+{
+  "name": "tcphole",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/shadow-cljs compile app",
+    "watch": "./node_modules/.bin/shadow-cljs watch app",
+    "repl": "./node_modules/.bin/shadow-cljs cljs-repl app",
+    "nodemon": "./node_modules/.bin/nodemon --exec \"node target/main.js\" --watch target/"
+  },
+  "dependencies": {
+    "shadow-cljs": "^2.8.35"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "target/*"
+    ],
+    "delay": "2500"
+  },
+  "author": "mishazawa",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}
